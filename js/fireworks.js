@@ -4,11 +4,11 @@
   var FLAG_KEY = "me-wedding-fireworks-shown";
 
   var alreadyShown = false;
-  try { alreadyShown = localStorage.getItem(FLAG_KEY) === "1"; } catch (e) { /* ignore */ }
+  try { alreadyShown = sessionStorage.getItem(FLAG_KEY) === "1"; } catch (e) { /* ignore */ }
   if (alreadyShown) return;
 
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    try { localStorage.setItem(FLAG_KEY, "1"); } catch (e) { /* ignore */ }
+    try { sessionStorage.setItem(FLAG_KEY, "1"); } catch (e) { /* ignore */ }
     return;
   }
 
@@ -104,7 +104,7 @@
     setTimeout(function () {
       if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
     }, 1200);
-    try { localStorage.setItem(FLAG_KEY, "1"); } catch (e) { /* ignore */ }
+    try { sessionStorage.setItem(FLAG_KEY, "1"); } catch (e) { /* ignore */ }
   }
 
   // Safety net: never let the overlay linger indefinitely.
