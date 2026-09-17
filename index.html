@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria Isabella &amp; Eric</title>
+<meta name="description" content="Maria Isabella & Eric — 16 de janeiro de 2027, Rio de Janeiro">
+<link rel="icon" href="assets/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link" aria-label="Maria Isabella e Eric — início">
+      <img src="assets/images/logo.png" alt="ME" class="logo-mark">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="historia.html" class="nav-link" data-i18n="nav.story">Nossa História</a>
+      <a href="evento.html" class="nav-link" data-i18n="nav.event">Detalhes do Evento</a>
+      <a href="galeria.html" class="nav-link" data-i18n="nav.gallery">Galeria</a>
+      <a href="rsvp.html" class="nav-link" data-i18n="nav.rsvp">RSVP</a>
+      <a href="presentes.html" class="nav-link" data-i18n="nav.registry">Lista de Presentes</a>
+      <div class="nav-utility">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+          <span class="lang-pt is-active">Português</span><span class="lang-sep">/</span><span class="lang-en">English</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="hero-image">
+      <img src="assets/images/hero-watercolor.jpg" alt="Ilustração em aquarela da Pedra da Gávea, Rio de Janeiro">
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-names">Maria Isabella &amp; Eric</h1>
+      <div class="ornament"><span></span><i></i><span></span></div>
+      <p class="hero-date" data-i18n="hero.date">16 de janeiro de 2027 · Rio de Janeiro</p>
+    </div>
+  </section>
+
+  <section class="countdown-section">
+    <p class="countdown-label" data-i18n="countdown.label">Faltam</p>
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div class="countdown-unit"><span class="countdown-number" id="cd-days">00</span><span class="countdown-word" data-i18n="countdown.days">dias</span></div>
+      <div class="countdown-unit"><span class="countdown-number" id="cd-hours">00</span><span class="countdown-word" data-i18n="countdown.hours">horas</span></div>
+      <div class="countdown-unit"><span class="countdown-number" id="cd-minutes">00</span><span class="countdown-word" data-i18n="countdown.minutes">minutos</span></div>
+      <div class="countdown-unit"><span class="countdown-number" id="cd-seconds">00</span><span class="countdown-word" data-i18n="countdown.seconds">segundos</span></div>
+    </div>
+  </section>
+
+  <section class="preview-section">
+    <div class="preview-media">
+      <img src="assets/images/silhouette-kiss-1.jpg" alt="Maria Isabella e Eric ao entardecer">
+    </div>
+    <div class="preview-copy">
+      <p class="eyebrow" data-i18n="story.eyebrow">Nossa História</p>
+      <h2 data-i18n="story.previewTitle">Como tudo começou&hellip;</h2>
+      <div class="ornament"><span></span><i></i><span></span></div>
+      <p class="body-copy" data-i18n="story.previewBody">Um jogo do Fluminense. Um gol. Um beijo.</p>
+      <a href="historia.html" class="text-link" data-i18n="story.previewLink">Veja nossa história completa</a>
+    </div>
+  </section>
+
+  <section class="preview-section preview-section--celebration">
+    <div class="preview-copy">
+      <p class="eyebrow" data-i18n="event.eyebrow">Detalhes do Evento</p>
+      <h2 data-i18n="event.previewTitle">A Celebração</h2>
+      <div class="ornament"><span></span><i></i><span></span></div>
+      <div class="schedule-preview">
+        <div class="schedule-preview-row">
+          <span class="schedule-preview-time" data-i18n="event.time">20:00</span>
+          <span class="schedule-preview-marker"></span>
+          <span class="schedule-preview-name" data-i18n="event.ceremony">Cerimônia</span>
+        </div>
+        <div class="schedule-preview-row">
+          <span class="schedule-preview-time"></span>
+          <span class="schedule-preview-marker"></span>
+          <span class="schedule-preview-name" data-i18n="event.cocktail">Coquetel</span>
+        </div>
+        <div class="schedule-preview-row">
+          <span class="schedule-preview-time"></span>
+          <span class="schedule-preview-marker"></span>
+          <span class="schedule-preview-name" data-i18n="event.party">Festa</span>
+        </div>
+      </div>
+      <p class="dress-code-note"><em data-i18n="event.dressCodeNote">Dress code: Black tie</em></p>
+      <a href="evento.html" class="text-link" data-i18n="event.previewLink">Detalhes completos do evento</a>
+    </div>
+  </section>
+
+  <section class="preview-section preview-section--gallery">
+    <div class="preview-copy preview-copy--centered">
+      <p class="eyebrow" data-i18n="gallery.eyebrow">Galeria</p>
+      <h2 data-i18n="gallery.title">Galeria de recordações</h2>
+      <div class="ornament"><span></span><i></i><span></span></div>
+    </div>
+    <div class="preview-gallery-grid">
+      <div class="preview-gallery-main">
+        <img src="assets/images/hug-mountain.jpg" alt="Maria Isabella e Eric abraçados com a Pedra da Gávea ao fundo">
+      </div>
+      <div class="preview-gallery-side">
+        <img src="assets/images/couple-laughing-balcony.jpg" alt="Maria Isabella e Eric rindo na varanda ao pôr do sol">
+        <img src="assets/images/hug-kiss-dusk.jpg" alt="Maria Isabella e Eric abraçados ao entardecer">
+      </div>
+    </div>
+    <a href="galeria.html" class="text-link text-link--centered" data-i18n="gallery.previewLink">Galeria completa</a>
+  </section>
+
+  <section class="preview-section preview-section--rsvp">
+    <p class="eyebrow" data-i18n="rsvp.eyebrow">RSVP</p>
+    <h2 data-i18n="rsvp.title">Confirme sua presença</h2>
+    <div class="ornament"><span></span><i></i><span></span></div>
+    <p class="body-copy" data-i18n="rsvp.previewBody">Contamos com você para celebrar esse dia especial com a gente</p>
+    <a href="rsvp.html" class="btn-outline" data-i18n="rsvp.button">RSVP</a>
+  </section>
+
+  <section class="preview-section preview-section--registry">
+    <p class="eyebrow" data-i18n="registry.eyebrow">Lista de Presentes</p>
+    <h2 data-i18n="registry.title">Lista de Casamento</h2>
+    <div class="ornament"><span></span><i></i><span></span></div>
+    <p class="body-copy" data-i18n="registry.thanks">Obrigado por nos ajudar a começarmos essa nova jornada</p>
+    <a href="presentes.html" class="btn-outline" data-i18n="registry.button">Ver lista</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="ornament"><span></span><i></i><span></span></div>
+  <h2 class="footer-names">Maria Isabella &amp; Eric</h2>
+  <nav class="footer-nav">
+    <a href="historia.html" data-i18n="nav.story">Nossa História</a>
+    <a href="evento.html" data-i18n="nav.event">Detalhes do Evento</a>
+    <a href="galeria.html" data-i18n="nav.gallery">Galeria</a>
+    <a href="rsvp.html" data-i18n="nav.rsvp">RSVP</a>
+  </nav>
+</footer>
+
+
+<script src="js/i18n.js"></script>
+<script src="js/script.js"></script>
+<script src="js/fireworks.js"></script>
+
+</body>
+</html>
