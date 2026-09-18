@@ -81,9 +81,13 @@ const I18N = {
     "rsvp.deadline": "Confirme até 6 de janeiro de 2027",
 
     "registry.eyebrow": "Lista de Presentes",
-    "registry.title": "Lista de Casamento",
+    "registry.title": "Lista de Presentes de Casamento",
     "registry.thanks": "Obrigado por nos ajudar a começarmos essa nova jornada",
-    "registry.button": "Ver lista"
+    "registry.button": "Ver lista",
+
+    "music.play": "Tocar música",
+    "music.pause": "Pausar música",
+    "footer.musicCredit": "Música: <em>Marcha Nupcial</em> de Mendelssohn, New York Philharmonic (1951) — via <a href=\"https://archive.org/details/MendelssohnAMidsummerNightsDream-szell\" target=\"_blank\" rel=\"noopener\">Internet Archive</a>, CC BY-NC-SA 3.0"
   },
 
   en: {
@@ -167,6 +171,10 @@ const I18N = {
     "registry.eyebrow": "Registry",
     "registry.title": "Wedding Registry",
     "registry.thanks": "Thank you for helping us start this new journey",
-    "registry.button": "View registry"
+    "registry.button": "View registry",
+
+    "music.play": "Play music",
+    "music.pause": "Pause music",
+    "footer.musicCredit": "Music: Mendelssohn's <em>Wedding March</em>, New York Philharmonic (1951) — via <a href=\"https://archive.org/details/MendelssohnAMidsummerNightsDream-szell\" target=\"_blank\" rel=\"noopener\">Internet Archive</a>, CC BY-NC-SA 3.0"
   }
 };

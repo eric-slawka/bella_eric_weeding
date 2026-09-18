@@ -5,6 +5,7 @@
   var LANG_KEY = "me-wedding-lang";
   var htmlEl = document.documentElement;
   var langToggle = document.getElementById("langToggle");
+  var musicToggle = document.getElementById("musicToggle");
 
   function applyLang(lang) {
     var dict = I18N[lang] || I18N.pt;
@@ -27,6 +28,10 @@
         enSpan.classList.remove("is-active");
         ptSpan.classList.add("is-active");
       }
+    }
+    if (musicToggle) {
+      var playing = musicToggle.classList.contains("is-playing");
+      musicToggle.setAttribute("aria-label", playing ? dict["music.pause"] : dict["music.play"]);
     }
     try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* ignore */ }
   }
@@ -101,5 +106,45 @@
   if (elDays) {
     tickCountdown();
     setInterval(tickCountdown, 1000);
+  }
+
+  /* ---------- Background music ---------- */
+  var MUSIC_KEY = "me-wedding-music-on";
+  var audio = document.getElementById("bgAudio");
+
+  function setMusicIcon(playing) {
+    if (!musicToggle) return;
+    musicToggle.classList.toggle("is-playing", playing);
+    var dict = I18N[currentLang] || I18N.pt;
+    musicToggle.setAttribute("aria-label", playing ? dict["music.pause"] : dict["music.play"]);
+  }
+
+  if (audio && musicToggle) {
+    musicToggle.addEventListener("click", function () {
+      if (audio.paused) {
+        audio.play().then(function () {
+          setMusicIcon(true);
+          try { localStorage.setItem(MUSIC_KEY, "1"); } catch (e) { /* ignore */ }
+        }).catch(function () {
+          setMusicIcon(false);
+        });
+      } else {
+        audio.pause();
+        setMusicIcon(false);
+        try { localStorage.setItem(MUSIC_KEY, "0"); } catch (e) { /* ignore */ }
+      }
+    });
+
+    var wantsMusic = false;
+    try { wantsMusic = localStorage.getItem(MUSIC_KEY) === "1"; } catch (e) { /* ignore */ }
+
+    if (wantsMusic) {
+      audio.play().then(function () {
+        setMusicIcon(true);
+      }).catch(function () {
+        // Autoplay blocked (no prior user gesture on this page load) — leave paused.
+        setMusicIcon(false);
+      });
+    }
   }
 })();

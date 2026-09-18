@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<audio id="bgAudio" loop preload="none" src="https://archive.org/download/MendelssohnAMidsummerNightsDream-szell/05.WeddingMarch.mp3"></audio>
 
 <header class="site-header" id="top">
   <div class="header-inner">
@@ -32,6 +33,10 @@
       <div class="nav-utility">
         <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
           <span class="lang-pt is-active">Português</span><span class="lang-sep">/</span><span class="lang-en">English</span>
+        </button>
+        <button class="music-toggle" id="musicToggle" type="button" aria-label="Play music" aria-pressed="false">
+          <svg class="icon-off" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M17 9l4 4M21 9l-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <svg class="icon-on" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
         </button>
       </div>
     </nav>
@@ -108,6 +113,7 @@
     <a href="galeria.html" data-i18n="nav.gallery">Galeria</a>
     <a href="rsvp.html" data-i18n="nav.rsvp">RSVP</a>
   </nav>
+  <p class="footer-credit" data-i18n="footer.musicCredit">Música: <em>Marcha Nupcial</em> de Mendelssohn, New York Philharmonic (1951) — via <a href="https://archive.org/details/MendelssohnAMidsummerNightsDream-szell" target="_blank" rel="noopener">Internet Archive</a>, CC BY-NC-SA 3.0</p>
 </footer>
 
 
